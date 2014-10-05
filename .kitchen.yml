@@ -6,10 +6,17 @@ provisioner:
   name: chef_solo
 
 platforms:
-  - name: ubuntu-12.04
+  #- name: ubuntu-12.04
   - name: centos-6.4
 
 suites:
   - name: default
     run_list:
+      - recipe[build-essential::default]
+      - recipe[apt::default]
+      - recipe[git::default]
+      - recipe[timezone::default]
+      - recipe[vim::default]
+      - recipe[apache2::default]
+      - recipe[mysql::server]
     attributes:
