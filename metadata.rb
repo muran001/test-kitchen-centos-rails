@@ -1,6 +1,6 @@
 name             'rails-cookbook'
-maintainer       'YOUR_NAME'
-maintainer_email 'YOUR_EMAIL'
+maintainer       'muran001'
+maintainer_email ''
 license          'All rights reserved'
 description      'Installs/Configures rails-cookbook'
 long_description 'Installs/Configures rails-cookbook'
