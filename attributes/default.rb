@@ -1,7 +1,7 @@
 
-default['mysql']['server_root_password'] = 'hogehoge'
-default['mysql']['server_repl_password'] = 'hogehoge'
-default['mysql']['server_debian_password'] = 'hogehoge'
+#default['mysql']['server_root_password'] = 'hogehoge'
+#default['mysql']['server_repl_password'] = 'hogehoge'
+#default['mysql']['server_debian_password'] = 'hogehoge'
 
 #default['mysql']['host'] = 'localhost'
 #default['mysql']['port'] = '3308'

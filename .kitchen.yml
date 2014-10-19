@@ -7,8 +7,8 @@ provisioner:
   name: chef_solo
 
 platforms:
-  - name: ubuntu-12.04
-  #- name: centos-6.4
+  #- name: ubuntu-14.04
+  - name: centos-6.5
 
 suites:
   - name: default
@@ -19,7 +19,23 @@ suites:
       - recipe[timezone::default]
       - recipe[vim::default]
       - recipe[apache2::default]
-      - recipe[rbenv::default]
-      - recipe[rbenv::ruby_build]
+      - recipe[ruby_build::default]
+      - recipe[rbenv::system]
       - recipe[rails-cookbook::mysql]
     attributes:
+      mysql:
+        server_root_password: 'password'
+        server_debian_password: 'password'
+        server_repl_password: 'password'
+      rbenv:
+        rubies: ['2.1.3']
+        global: '2.1.3'
+        gems:
+          '2.1.3':
+            - name: 'bundler'
+              options: '--no-ri --no-rdoc'
+            - name: 'rbenv-rehash'
+              options: '--no-ri --no-rdoc'
+            - name: 'rails'
+              options: '--no-ri --no-rdoc'
+

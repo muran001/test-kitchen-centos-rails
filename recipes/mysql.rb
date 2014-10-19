@@ -1,14 +1,6 @@
+include_recipe 'mysql::client'
 include_recipe 'mysql::server'
 include_recipe 'database::mysql'
-
-template '/etc/mysql/conf.d/mysite.cnf' do
-  owner 'mysql'
-  owner 'mysql'
-  source 'mysite.cnf.erb'
-  notifies :restart, 'mysql_service[default]'
-end
-
-
 
 mysql_connection_info = {
   host: 'localhost',
