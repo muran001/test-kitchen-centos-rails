@@ -12,3 +12,8 @@ end
 describe port(80) do
   it { should be_listening }
 end
+
+describe file('/etc/apache2/sites-available/000-default.conf') do
+  it { should be_file }
+  its(:content) { should match /ServerAdmin webmaster@localhost/ }
+end

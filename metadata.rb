@@ -6,3 +6,5 @@ description      'Installs/Configures rails-cookbook'
 long_description 'Installs/Configures rails-cookbook'
 version          '0.1.0'
 
+depends 'mysql'
+depends 'database'

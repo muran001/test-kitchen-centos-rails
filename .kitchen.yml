@@ -19,5 +19,7 @@ suites:
       - recipe[timezone::default]
       - recipe[vim::default]
       - recipe[apache2::default]
-      - recipe[mysql::server]
+      - recipe[rbenv::default]
+      - recipe[rbenv::ruby_build]
+      - recipe[rails-cookbook::mysql]
     attributes:

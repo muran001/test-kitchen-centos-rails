@@ -14,4 +14,7 @@ source 'https://rubygems.org'
 #  gem "vagrant-omnibus", github: "schisamo/vagrant-omnibus"
 #end
 
+gem 'berkshelf'
 gem 'kitchen-docker'
+gem 'serverspec'
+
